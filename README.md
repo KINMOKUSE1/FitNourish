@@ -117,4 +117,3 @@ FitNourish/
 ## 参考资料
 
 - [ABC Trainerize](https://www.trainerize.com/)：产品参考。
-- 课程《06 AI 原生项目管理与上下文构建》及本周交付截图：目录结构与协作交付要求。课件保存在课程资料会话中，未复制进入仓库。
