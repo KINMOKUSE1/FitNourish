@@ -19,10 +19,9 @@
 
 完整功能树集中维护在 `context.md` 第 5 节：
 
-- [Trainerize 原始功能树](context.md#52-trainerize-原始功能树)：按官网截图的 COACH、ENGAGE、MANAGE、GROW 四类十七项展示。
-- [逐项取舍对照](context.md#53-原功能与项目功能的取舍对照)：说明哪些保留、简化、接入 AI 或删除。
-- [FitNourish 功能树](context.md#54-fitnourish-功能树)：展开训练、AI 训练构建、AI 营养指导、反馈、学员管理与基础管理。
-- [角色与模块对应](context.md#55-角色与模块的对应关系)：说明学员、教练、管理员分别参与哪些操作。
+- [MVP1 范围总览](context.md#51-范围总览)：第一版各模块包含的能力。
+- [FitNourish 功能树](context.md#52-fitnourish-功能树)：展开训练、AI 训练构建、AI 营养指导、反馈、学员管理与基础管理。
+- [角色与模块对应](context.md#53-角色与模块的对应关系)：说明学员、教练、管理员分别参与哪些操作。
 
 以上是待实现的 MVP1 范围；指导关系的具体建立方式和餐食照片上传仍待确认。
 
@@ -30,7 +29,7 @@
 
 本周为项目上下文与协作基础建设阶段。本地已建立上下文、规则、标准目录和 PR 模板；尚未实现业务功能，技术栈和 AI 服务商待确认。
 
-远端仓库尚未创建，GitHub Projects、Issue 和演练 PR 均待建立。当前没有运行命令、部署入口或已完成业务功能。
+[GitHub 仓库](https://github.com/KINMOKUSE1/FitNourish)和[课程看板](https://github.com/users/KINMOKUSE1/projects/3)已建立，本周五条 Issue 已录入；文档与结构通过 `chore/project-bootstrap` 分支提交评审。当前没有运行命令、部署入口或已完成业务功能。任务进度以看板为准。
 
 ## 文档导航
 
@@ -74,20 +73,20 @@ FitNourish/
 | 项目全局边界 | `context.md` |
 | AI 规则文件 | `agent-rules.md` |
 | 标准化仓库 | 本目录结构、README 和忽略规则 |
-| GitHub Projects 看板 | 待创建；创建后在本节补充链接 |
-| 无业务代码演练 PR | 待创建；创建后在本节补充链接 |
+| GitHub Projects 看板 | [FitNourish — Course Project](https://github.com/users/KINMOKUSE1/projects/3) |
+| 无业务代码演练 PR | 本次任务分支将发起演练 PR，创建后补充链接 |
 
 看板状态沿用课程要求：`Backlog → This Week → In Progress → Review → Done`。远端建立后，任务状态以看板为准。
 
-以下为待录入的 Issue 草案，不表示 GitHub 上已经存在对应任务。负责人由团队分配；本周尚无 Spec，关联规格栏注明“本周基础建设，参见 context.md”。
+以下任务已建立真实 Issue，当前负责人为 `@KINMOKUSE1`。文档此前已在本地起草，本次导入仓库并开展评审，不追溯改写执行时间。本周尚无 Spec，Issue 引用本周文档。人工评审尚未完成。
 
 | Issue 标题 | 验收标准 |
 | --- | --- |
-| 编写 FitNourish 项目上下文 | 明确目标、三角色、MVP、至少三条可判定 Non-Goals、技术约束和风险；待定事项单列；完成范围评审 |
-| 编写 AI 协作规则 | 明确读取入口、修改范围、AI 发布边界、验证与 Git 权限；规则可执行、可检查 |
-| 初始化标准仓库结构 | 目录与课程要求一致；README 链接有效；无业务代码和密钥；完成本地结构检查 |
-| 建立项目看板 | 设置五种状态；录入本周 Issue，指定负责人并关联看板 |
-| 完成无业务代码 PR 演练 | PR 关联 Issue；填写变更、验证及 AI 使用说明；包含实际评审意见；变更仅涉及文档、结构及配置 |
+| [#1 编写 FitNourish 项目上下文](https://github.com/KINMOKUSE1/FitNourish/issues/1) | 明确目标、三角色、MVP、至少三条可判定 Non-Goals、技术约束和风险；待定事项单列；完成范围评审 |
+| [#2 编写 AI 协作规则](https://github.com/KINMOKUSE1/FitNourish/issues/2) | 明确读取入口、修改范围、AI 发布边界、验证与 Git 权限；规则可执行、可检查 |
+| [#3 初始化标准仓库结构](https://github.com/KINMOKUSE1/FitNourish/issues/3) | 目录与课程要求一致；README 链接有效；无业务代码和密钥；完成本地结构检查 |
+| [#4 建立项目看板](https://github.com/KINMOKUSE1/FitNourish/issues/4) | 设置五种状态；录入本周 Issue，指定负责人并关联看板 |
+| [#5 完成无业务代码 PR 演练](https://github.com/KINMOKUSE1/FitNourish/issues/5) | PR 关联 Issue；填写变更、验证及 AI 使用说明；包含实际评审意见；变更仅涉及文档、结构及配置 |
 
 每个 Issue 正文包含：业务背景、任务范围、验收标准、关联规格或本周文档、负责人。
 
