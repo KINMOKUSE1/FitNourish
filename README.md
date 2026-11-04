@@ -74,7 +74,7 @@ FitNourish/
 | AI 规则文件 | `agent-rules.md` |
 | 标准化仓库 | 本目录结构、README 和忽略规则 |
 | GitHub Projects 看板 | [FitNourish — Course Project](https://github.com/users/KINMOKUSE1/projects/3) |
-| 无业务代码演练 PR | 本次任务分支将发起演练 PR，创建后补充链接 |
+| 无业务代码演练 PR | [#6 文档协作入口与导航修正](https://github.com/KINMOKUSE1/FitNourish/pull/6)，保留开放等待人工评审 |
 
 看板状态沿用课程要求：`Backlog → This Week → In Progress → Review → Done`。远端建立后，任务状态以看板为准。
 
@@ -90,9 +90,9 @@ FitNourish/
 
 每个 Issue 正文包含：业务背景、任务范围、验收标准、关联规格或本周文档、负责人。
 
-### 演练 PR 草案
+### 演练 PR
 
-建议标题：`chore: initialize FitNourish project context and repository structure`
+实际 PR：[docs: connect course deliverables to GitHub workflow](https://github.com/KINMOKUSE1/FitNourish/pull/6)。完整文档与标准目录此前已提交至 `main`；本 PR 保留现有历史，展示本次文档导航和协作入口修正。
 
 - 关联任务：填写实际 Issue 编号，不使用虚构编号。
 - 变更内容：增加项目上下文、AI 协作规则、README、标准目录、忽略规则和 PR 模板。
