@@ -207,7 +207,9 @@ AI 训练构建负责生成草稿，Fitness 负责训练计划的编辑发布与
 - 学员档案具体字段、餐食照片是否纳入第一版。
 - 前后端、数据库、AI 服务商、模型、调用预算及部署方式。
 - 团队成员、分工、课程节点与交付日期。
-- GitHub 仓库、Projects 看板及评审人员。
+- 团队评审人员（当前仓库仅有账号所有者，尚无队友协作者）。
+
+协作入口已建立：[GitHub 仓库](https://github.com/KINMOKUSE1/FitNourish)、[Projects 看板](https://github.com/users/KINMOKUSE1/projects/3)。具体任务和状态从 README 导航到 Issue 与看板查询。
 
 已确认：项目名称 FitNourish；三种角色；保留 AI 训练构建及 AI 营养指导；两类 AI 草稿均由教练确认后发布。
 
