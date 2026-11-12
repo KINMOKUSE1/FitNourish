@@ -17,20 +17,21 @@
 
 ## 功能树与范围对照
 
-完整功能树集中维护在 `context.md` 第 5 节：
+MVP1 的最小范围已锁定在 [spec/mvp1-scope.md](spec/mvp1-scope.md)（基线 v1.0，九个模块各有一份可测试 Spec）。`context.md` 第 5 节仍是业务边界主文档：
 
-- [Trainerize 原始功能树](context.md#52-trainerize-原始功能树)：按官网截图的 COACH、ENGAGE、MANAGE、GROW 四类十七项展示。
-- [逐项取舍对照](context.md#53-原功能与项目功能的取舍对照)：说明哪些保留、简化、接入 AI 或删除。
-- [FitNourish 功能树](context.md#54-fitnourish-功能树)：展开训练、AI 训练构建、AI 营养指导、反馈、学员管理与基础管理。
-- [角色与模块对应](context.md#55-角色与模块的对应关系)：说明学员、教练、管理员分别参与哪些操作。
+- [范围总览](context.md#51-范围总览)：MVP1 九大模块及第一版包含的能力。
+- [FitNourish 功能树](context.md#52-fitnourish-功能树)：展开训练、AI 训练构建、AI 营养指导、反馈、学员管理与基础管理。
+- [角色与模块对应](context.md#53-角色与模块的对应关系)：说明学员、教练、管理员分别参与哪些操作。
 
-以上是待实现的 MVP1 范围；指导关系的具体建立方式和餐食照片上传仍待确认。
+以上均为待实现的 MVP1 范围；指导关系的具体建立方式和餐食照片上传仍待确认，见 [spec/mvp1-scope.md](spec/mvp1-scope.md) 第 9 节。
 
 ## 当前阶段
 
-本周为项目上下文与协作基础建设阶段。本地已建立上下文、规则、标准目录和 PR 模板；尚未实现业务功能，技术栈和 AI 服务商待确认。
+上一阶段完成了项目上下文、协作规则、标准目录与 PR 模板。本周（2026-11-11）锁定 MVP1 最小范围，为九个模块各写一份 Given/When/Then 可测试 Spec，并完成一次冷启动校验；交付物见 [文档导航](#文档导航) 与 [本周交付](#本周交付与-github-准备)。
 
-远端仓库尚未创建，GitHub Projects、Issue 和演练 PR 均待建立。当前没有运行命令、部署入口或已完成业务功能。
+**本周仍不写业务代码**：`src/` 保持空占位，尚未实现任何业务功能，技术栈、数据库与 AI 服务商待确认，当前没有运行命令或部署入口。
+
+远端仓库、GitHub Projects、Issue 和演练 PR 均待建立；看板链接待创建后补充。
 
 ## 文档导航
 
@@ -38,13 +39,16 @@
 | --- | --- |
 | [context.md](context.md) | 项目目标、角色、MVP、非目标、技术约束和待定项 |
 | [agent-rules.md](agent-rules.md) | 人与 AI 的协作、范围、验证及 Git 规则 |
-| [spec/](spec/) | 后续功能规格与验收标准 |
+| [spec/mvp1-scope.md](spec/mvp1-scope.md) | MVP1 范围基线、九个模块编号、AC 写法约定与虚构演示数据 |
+| [spec/ 模块 Spec](spec/) | M01–M09 各自的可测试 Spec 与 Given/When/Then 编号验收标准 |
+| [docs/test/cold-start-01.md](docs/test/cold-start-01.md) | 本周冷启动校验的提示词、实际结果、文档缺口与复验结论 |
+| [adr/001-technology-stack.md](adr/001-technology-stack.md) | 技术栈对比框架（Proposed，待团队评审） |
 | [adr/](adr/) | 后续重要技术决策及依据 |
 | [plans/](plans/) | 后续任务拆解、依赖和 Issue 关联 |
 | [docs/spike/](docs/spike/) | 必要技术探针与结果 |
 | [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) | 变更、验证、AI 使用和评审信息 |
 
-开始协作时，请明确要求 AI 读取 `context.md`、`agent-rules.md` 和当前任务相关文件。
+开始协作时，请明确要求 AI 读取 `context.md`、`agent-rules.md`、`spec/mvp1-scope.md` 以及当前任务对应的模块 Spec。
 
 ## 标准目录
 
@@ -57,12 +61,16 @@ FitNourish/
 ├── .github/
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── spec/
+│   ├── mvp1-scope.md
+│   └── module-01 … module-09-*.md
 ├── adr/
 ├── plans/
 ├── src/
 ├── tests/
 └── docs/
-    └── spike/
+    ├── spike/
+    └── test/
+        └── cold-start-01.md
 ```
 
 空目录中的 `.gitkeep` 仅用于 Git 保留目录。当前不生成业务脚手架；前后端目录及启动方法在技术栈确定并实际实现后补充。
@@ -73,13 +81,16 @@ FitNourish/
 | --- | --- |
 | 项目全局边界 | `context.md` |
 | AI 规则文件 | `agent-rules.md` |
+| MVP1 范围锁定 | [`spec/mvp1-scope.md`](spec/mvp1-scope.md) |
+| 九份可测试模块 Spec | [`spec/`](spec/)（M01–M09，Given/When/Then 编号 AC） |
+| 冷启动校验记录 | [`docs/test/cold-start-01.md`](docs/test/cold-start-01.md) |
 | 标准化仓库 | 本目录结构、README 和忽略规则 |
 | GitHub Projects 看板 | 待创建；创建后在本节补充链接 |
 | 无业务代码演练 PR | 待创建；创建后在本节补充链接 |
 
 看板状态沿用课程要求：`Backlog → This Week → In Progress → Review → Done`。远端建立后，任务状态以看板为准。
 
-以下为待录入的 Issue 草案，不表示 GitHub 上已经存在对应任务。负责人由团队分配；本周尚无 Spec，关联规格栏注明“本周基础建设，参见 context.md”。
+以下为上一阶段（基础建设周）遗留的待录入 Issue 草案，不表示 GitHub 上已经存在对应任务。负责人由团队分配；本周已有 Spec，新建 Issue 的关联规格栏应引用 `spec/mvp1-scope.md` 及对应模块 Spec。
 
 | Issue 标题 | 验收标准 |
 | --- | --- |
@@ -91,7 +102,16 @@ FitNourish/
 
 每个 Issue 正文包含：业务背景、任务范围、验收标准、关联规格或本周文档、负责人。
 
-### 演练 PR 草案
+### 本周（Spec 与冷启动）Issue 草案
+
+| Issue 标题 | 验收标准 |
+| --- | --- |
+| 锁定 MVP1 最小范围并编写范围基线 | `spec/mvp1-scope.md` 明确 In/Out of Scope、九个模块编号、角色矩阵、AC 写法约定与待确认项；范围可判定且与 `context.md` 一致 |
+| 为 MVP1 全部模块编写可测试 Spec | 九个模块各一份 Spec；每条 AC 使用 Given/When/Then 并带类型标注；覆盖正常流、异常流、权限边界；M04/M05 含 AI 失败，M03/M05/M08 含历史一致性 |
+| 完成一次冷启动校验 | `docs/test/cold-start-01.md` 记录提示词、逐题实际结果、发现的问题及复验结论；不把未执行的校验写成已完成 |
+| 同步文档导航并修复失效链接 | README 锚点与 `context.md` 实际章节一致；导航指向本周交付物；变更仅涉及文档、目录和配置 |
+
+### 演练 PR 草案（上一阶段，保留备查）
 
 建议标题：`chore: initialize FitNourish project context and repository structure`
 
@@ -107,12 +127,11 @@ FitNourish/
 
 以下文件尚未创建，在对应阶段逐步完善：
 
-- `spec/coaching-relationship.md`：指导关系和数据权限。
-- `spec/training-plan.md`：训练计划及 AI 生成、编辑、确认、发布流程。
-- `spec/nutrition-guidance.md`：饮食指导及 AI 草稿流程。
-- `spec/execution-feedback.md`：执行记录、反馈、历史关联与进度。
-- `adr/001-technology-stack.md`：有依据地比较并确定技术栈。
 - `plans/mvp1.md`：依据确认后的规格、设计和决策拆解任务。
+- `docs/spike/`：技术探针，记录 AI 输入输出结构、校验、超时与重试的验证结论。已起草 `spike-01/02/03` 执行模板（针对方案 B，待执行），首批建议见 [`adr/001-technology-stack.md`](adr/001-technology-stack.md) 第 5 节。
+- 各模块 Spec 第 7 节的待确认项：确认后在原模块文件内细化，不另建重复文档。
+
+早期规划中的 `spec/coaching-relationship.md`、`spec/training-plan.md`、`spec/nutrition-guidance.md`、`spec/execution-feedback.md` 四个分主题文件，其内容已由 [`spec/mvp1-scope.md`](spec/mvp1-scope.md) 与 M01–M09 九份模块 Spec 覆盖，不再单独创建，避免维护两份内容。
 
 ## 参考资料
 
